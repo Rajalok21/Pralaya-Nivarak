@@ -7,7 +7,7 @@
 
 body{
     height:2453px;
-    
+    overflow-x: hidden;
 }
 .explain{
     font-family: Arial, Helvetica, sans-serif;

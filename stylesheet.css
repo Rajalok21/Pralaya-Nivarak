@@ -3,12 +3,19 @@
 * {
     margin: 0;
     padding: 0;
-    
+    /* box-sizing: border-box; */
   }
+.wrapper{
+  width:100%;
 
+  /* height:100vh; */
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+}
 body{
-   
-    height: 2830px;
+   overflow-x: hidden;
+    /* height: 2830px; */
+    /* width:100%; */
     /* border: 2px solid red; */
 }
 
@@ -298,11 +305,11 @@ opacity: 1;
     height: 500px;
     perspective: 800px;
     /* position: relative; */
-    transition: transform 1500ms;
+    /* transition: transform 1500ms;
     transform-style: preserve-3d;
     cursor: arrow;
    
-}
+} */
 
 .card:hover {
     transform: rotateY(180deg);
