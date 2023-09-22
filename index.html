@@ -1,49 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="stylesheet.css">
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let slideIndex = 0; // Start from 0 to synchronize with the automatic interval
+
+            function showSlides(n) {
+                const slides = document.querySelectorAll('.slide');
+
+                if (n >= slides.length) {
+                    slideIndex = 0; // Reset to 0 when reaching the end
+                }
+
+                if (n < 0) {
+                    slideIndex = slides.length - 1; // Go to the last slide when going back from the first
+                }
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+                }
+
+                slides[slideIndex].style.display = 'block';
+                slideIndex++; // Increment the slide index for the next call
+            }
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Previous button
+            document.querySelector('.prev').addEventListener('click', function () {
+                plusSlides(-1);
+            });
+
+            // Next button
+            document.querySelector('.next').addEventListener('click', function () {
+                plusSlides(1);
+            });
+
+            // Automatic slideshow
+            setInterval(function () {
+                plusSlides(1);
+            }, 4000); // Change image every 4 seconds (adjust as needed)
+
+            // Initial call to showSlides to display the first slide
+            showSlides(slideIndex);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactLink = document.getElementById('contact-link');
+            const contactDialog = document.getElementById('contact-dialog');
+            const closeDialogButton = document.getElementById('close-dialog');
+
+            contactLink.addEventListener('click', function () {
+                contactDialog.style.display = 'block';
+            });
+
+            closeDialogButton.addEventListener('click', function () {
+                contactDialog.style.display = 'none';
+            });
+        });
+
+    </script>
+    <title>Pralaya Nivarak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+
+    </style>
+
 </head>
+
 <body>
     <div class="wrapper">
-        <div class="navbar">
-            <div class="logo-area">
-               <img  class="pralay-nibarak-logo" src="logo.png" alt="">
-               <div class="heading">Weather Forecast</div>
-               <div class="menu">Menu</div>
-               <img  class="weather"src="weather.png" alt="">
+
+
+        <header>
+            <div class="logo">
+                <a href="" color=><img src="logo.png" alt="logo" height="90px" width="276px"></a>
             </div>
-            <div class="search-area">
-                <img  class="glass"src="glass.jpg" alt="">
-                <input class="search" type="text" placeholder="enter city" >
-                <button class="button" type="submit">Submit</button>
+            <div class="sidelogo">
+                <img class="i1" src="SIH2023-logo.png" height="60px" width="450px" alt="sideicon1">
+
+
+
             </div>
-            <div class="nav-items">
-                <div><a href="#today">Today</a></div>
-                <img class="rain" src="rain.jpeg" alt="">
-                <div><a href="#Hourly">Hourly</a></div>
-                <img class="sun" src="sun.webp" alt="">
-                <div><a href="#10Day">10Day</a></div>
-                <img class="winter" src="winter.webp" alt="">
-                <div><a href="#Monthly">Monthly</a></div>
-                <div><a href="#Weekend">Weekend</a></div>
-            </div>
-        </div>
-        <div class="output-area">
-            This is output area
-            <div class="rader">
-                add rader
-            </div>
-        </div>
-        <div class="footer">
-            <div><a href="#home">HOme</a></div>
-            <div><a href="#contact us">contact us</a></div>
-            <div><a href="#...">...</a></div>
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a href="#" id="home"> Home </a>
+                    </li>
+                    <li>
+                        <a href="#about"> About </a>
+                    </li>
+                    <li><a href="#" id="contact-link">Contact</a></li>
+                    <li>
+                        <a href="prevention.html">Prevention</a>
+                    </li>
+                    <li>
+                        <a href="#">Building Safety</a>
+                    </li>
+                    <li>
+                        <a href="weather.html">Weather predictor </a>
+                    </li>
+                    <li>
+                        <a href="training.html">Training </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+
+
+
+
+        </header>
+        <div class="btn">
+            <a href="dgfscdhg.gov.in/about-fire-service"></a>
+            <div class="round-btn" id="round-btn-fire"></div>
+            <a href="#"></a>
+            <div class="round-btn" id="round-btn-flood"></div>
+            <a href="#"></a>
+            <div class="round-btn" id="round-btn-earthquake"></div>
+            <a href="#"></a>
+            <div class="round-btn" id="round-btn-cyclone"></div>
+            <a href="#"></a>
+            <div class="round-btn" id="round-btn-nuclear"></div>
         </div>
 
+
+        <div class="mainarea">
+        </div>
+        <div class="slideshow">
+            <div class="slide fade">
+                <img src="img.jpg" width="100%" height="763px" alt="Image 1">
+            </div>
+            <div class="slide fade">
+                <mg src="fire.webp" width="100%" height="763px" alt="Image 3">
+            </div>
+
+            <div class="forward_backward">
+                <button class="prev" onclick="plusSlides(-1)">&#10094; </button>
+                <div class="slide fade">
+                    <img src="fire.webp" width="100%" height="763px" alt="Image 1">
+                </div>
+                <!-- ... (other slides) ... -->
+                <button class="next" onclick="plusSlides(1)"> &#10095;</button>
+            </div>
+
+        </div>
+
+
+        <script src="slideshow.js"></script>
+        <div class="bottom">
+            <div class="container">
+                <div class="card">
+                    <div class="front">
+                        <img class="image" src="covid.jpg" alt="Image 1" width="300px" height="500px">
+                        <div class="text">
+                            <div class="topical-report"></div>
+                            <div class="captons"></div>
+                        </div>
+
+                    </div>
+                    <div class="back">
+
+                        <img src="REPORT .png" alt="Back Image 1" width="300px" height="500px">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="front">
+                        <img src="cloudburst.jpg" alt="Image 2" width="300px" height="500px">
+                    </div>
+                    <div class="back">
+
+                        <img src="REPORT 2.png" alt="Back Image 2" width="300px" height="500px">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="front">
+                        <img src="earthquakec.jpg" alt="Image 3" width="300px" height="500px">
+                    </div>
+                    <div class="back">
+
+                        <img src="Report3.png" alt="Back Image 3" width="300px" height="500px">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="about-container">
+                <div class="about-text">
+                    <h1>About Our Disaster Management</h1>
+                    <p>
+                        We are dedicated to ensuring the safety and resilience of communities in the face of disasters.
+                        Our mission is to provide essential resources and guidance for disaster preparedness and
+                        response. Join us in creating a safer, more prepared world.
+                    </p>
+                </div>
+            </div>
+            <div class="intro">
+                <h1 class="h1">"Pralaya Nivarak"</h1>
+                <p class="introduction">Your trusted companion in the realm of disaster management and preparedness</p>
+            </div>
+
+
+
+
+        </div>
+        <footer class="footer">
+            <h1 class="ftext">
+                <div class="box">
+                    <img src="logo.png" alt="Logo" width="276px">
+                </div>
+            </h1>
+            <section class="texts-1">
+                <a href="#" id="home">
+                    <p class="footerlink">Home</p>
+                </a>
+                <a href="#">
+                    <p class="footerlink">About Us</p>
+                </a>
+                <a href="#">
+                    <p class="footerlink">Articles</p>
+                </a>
+                <a href="#">
+                    <p class="footerlink">Helpline</p>
+                </a>
+
+            </section>
+            <section class="texts-2">
+                <p class="footer-txt">Empowering communities to respond effectively to natural disasters like fires,
+                    earthquakes, cyclones, and floods with timely information and resources.</p></a>
+                <p class="footer-txt">A one-stop hub for real-time updates, emergency contacts, and safety guidelines to
+                    mitigate the impact of fires, earthquakes, cyclones, and floods.</p></a>
+                <p class="footer-txt">Disasters don't wait. Neither should you. Instant access to life-saving
+                    information."and floods.</p></a>
+                <p class="footer-txt">Your safety, our priority: Navigating through fires, earthquakes, cyclones, and
+                    floods made easy</p></a>
+
+            </section>
+
+
+            <div class="logos">
+                <img class="one" src="github logo.png" alt="github" width="80px" height="40px">
+                <img class="one" src="twitter logo.png" alt="twitter" width="50px" height="40px">
+                <img class="one" src="youtube logo.png" alt="youtube" width="60px" height="50px">
+                <img class="one" src="Instagram-Logo.png" alt="instagram" width="40px" height="40px">
+                <img class="one" src="linkedin logo.png" alt="linkedin" width="60px" height="50px">
+            </div>
+
+        </footer>
     </div>
 
 </body>
+
 </html>
