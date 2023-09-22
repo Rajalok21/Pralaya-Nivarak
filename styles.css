@@ -1,0 +1,94 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+.wrapper{
+    width:100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.navbar{
+    display:flex;
+    flex-direction: column;
+}
+.logo-area{
+    height:7rem;
+    background-color:rgb(249, 249, 251);
+    display:flex;
+    justify-content: space-between;
+}
+.pralay-nibarak-logo{
+    width:20%;
+    height:100%;
+}
+.heading{
+    padding:1.5em 2em 1em 2.9em;
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: x-large;
+    color:rgb(2, 2, 25);
+}
+.menu{
+    padding:1.5em 2em 1em 2.9em;
+    font-weight: 500;
+    font-size: x-large;
+    color:rgb(1, 1, 14);
+}
+.search-area{
+    width:100vw;
+    height:3rem;
+    text-align: center;
+    background-color: #eaf7f7;
+    display:flex;
+    justify-content: center;
+    padding-top: 0.4em;
+}
+.search{
+border-radius: 2px;
+width:30%;
+height:2.5em;
+
+}
+.glass{
+    width:30px;
+    height:2.1em;
+    background-color: #086868 ;
+}
+.button{
+    width:100px;
+    height:2.1em;
+
+}
+.nav-items{
+    display:flex;
+    justify-content: space-evenly;
+  background-color: rgb(253, 253, 253);
+    height:3.5rem;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.rain{
+    width:50px;
+    height:50px;
+}
+.sun{
+    width:50px;
+    height:50px;
+}
+.winter{
+    width:50px;
+    height:50px;
+}
+.output-area{
+    background-color: aquamarine;
+    height: 20rem;;
+}
+.footer{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: azure;
+}
