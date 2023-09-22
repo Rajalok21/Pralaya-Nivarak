@@ -125,9 +125,9 @@ body{
 
 
 .mainarea{
-    /* border: 2px solid red; */
+     border: 2px solid red; 
     width: 100%;
-    height: 283px;
+    height: 200px;
     position: absolute;
     display: inline-block;
     top: 1226px;
@@ -294,44 +294,6 @@ opacity: 1;
 }
 
 
-  /* .container {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 5px;
-}
-
-.card {
-    width: 300px;
-    height: 500px;
-    perspective: 800px;
-    /* position: relative; */
-    /* transition: transform 1500ms;
-    transform-style: preserve-3d;
-    cursor: arrow;
-   
-} */
-
-.card:hover {
-    transform: rotateY(180deg);
-}
-
-.front,
-.back {
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
-    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-    position: relative;
-    backface-visibility: hidden;
-    display:flex;
-    flex-direction: column;
-} */
-/* .front{
-  position:relative;
-  display:flex;
-  flex-direction: column;
-} */
 .text{
 position:absolute;
 align-self: flex-end;
@@ -348,25 +310,6 @@ justify-self: flex-end;
     border-radius: 2rem;
     
 } 
-/* .back h1{
-
-    color: white;
-    position:relative;
-    text-align: centre;
-
-} */
-
-/* .back {
-    background-color: #fdfbfb;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    color: white;
-} */
 
 .btn {
     width: 100%;
@@ -427,11 +370,6 @@ justify-self: flex-end;
 
 
 
-/* .fire { background-image: url('fire.jpg'); }
-.flood { background-image: url('flood.jpg'); }
-.earthquake { background-image: url('earthquake.jpg'); }
-.cyclone { background-image: url('cyclone.jpg'); }
-.nuclear { background-image: url('nuclear.jpg'); } */
 
 
 
@@ -445,7 +383,7 @@ justify-self: flex-end;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     animation: shadowAnimation 1s infinite alternate;
     position: absolute;
-    top: 800px;
+    top: 400px;
   
 }
 
@@ -505,14 +443,14 @@ padding: 6px;
   display: flex;
   justify-content: space-around;
   gap: 10px;
-  top: -386px;
-  height: 933px;
+  top: -50px;
+  height: 200px;
   position:absolute;
   align-items: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  
-  
+  background-image: linear-gradient(to bottom,rgb(232, 196, 128),#95d7e3);
+  border: 2px solid red;
 }
 
 .card {
@@ -558,6 +496,8 @@ padding: 6px;
   background-color: #2c3e50;
   color: #fff;
   padding: 20px;
+  position: absolute;
+  top: 2158px;
 }
 
 .footer-content {
