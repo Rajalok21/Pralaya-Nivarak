@@ -266,7 +266,7 @@ body {
 #check:checked ~ ul{
     right:0;
 }
-@media (max-width : 1300px){
+@media (max-width : 1000px){
     .navbar{
         display:none;
     }
