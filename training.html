@@ -13,7 +13,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url(disaster.jpg);
+            background-image: url(trabak.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
             color: white;
             overflow: hidden;
 
@@ -29,19 +31,17 @@
         }
 
         .section {
-            display: none;
-            padding: 20px;
-            border-radius: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-            text-align: center;
-            animation: fadeIn 1s;
-        }
+    display: none;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    animation: fadeIn 1s;
+}
 
         #video-section,
         #form-section,
         #certificate-section {
-            border: 2px solid #878282;
+            /* border: 2px solid #878282; */
         }
 
         #certificate-section {
@@ -116,7 +116,7 @@
     </div>
 
     <div id="video-section" class="section">
-        <h1>Training Videos</h1>
+        <h1 style="color: #050c13;">Training Videos</h1>
         <div id="video-container"></div>
         <button onclick="showForm()">Next</button>
     </div>
@@ -170,6 +170,7 @@
 
         
     </div>
+    
 
     <script>
         // Declare a global variable to hold the video iframe element
@@ -226,91 +227,22 @@
             }
         }
     
-        // Array to store questions and their options
-const questions = [
-    {
-        question: "Question 1: What should you do during an earthquake?",
-        options: ["A. Run outside", "B. Hide under a table", "C. Stand near a window", "D. Stay where you are"],
-        correctAnswer: "D"
-    },
-    {
-        question: "Question 2: How should you prepare for a cyclone?",
-        options: ["A. Board up windows", "B. Open all doors", "C. Go for a swim", "D. Stand on the roof"],
-        correctAnswer: "A"
-    },
-    {
-        question: "Question 3: What is the most common cause of flooding?",
-        options: ["A. Heavy rain", "B. Sunshine", "C. Snowfall", "D. Tornado"],
-        correctAnswer: "A"
-    },
-    {
-        question: "Question 4: How can you prevent a fire at home?",
-        options: ["A. Keep flammable items near the stove", "B. Use candles without supervision", "C. Install smoke detectors", "D. Pour water on electrical appliances"],
-        correctAnswer: "C"
-    },
-    {
-        question: "Question 5: What should you do when you hear a tornado warning?",
-        options: ["A. Go outside to see the tornado", "B. Stay in a mobile home", "C. Take shelter in a basement or an interior room", "D. Drive towards the tornado"],
-        correctAnswer: "C"
-    }
-];
-
-let currentQuestion = 0; // Track the current question
-
-function showForm() {
-    const formSection = document.getElementById('form-section');
-    formSection.innerHTML = ''; // Clear existing content
-
-    // Display the current question and options
-    const questionData = questions[currentQuestion];
-    const form = document.createElement('form');
-    form.onsubmit = function (event) {
-        event.preventDefault(); // Prevent form submission
-        checkAnswer(questionData.correctAnswer);
-    };
-    const questionText = document.createElement('p');
-    questionText.textContent = questionData.question;
-    form.appendChild(questionText);
-
-    questionData.options.forEach((option, index) => {
-        const label = document.createElement('label');
-        label.innerHTML = `<input type="radio" name="answer" value="${String.fromCharCode(65 + index)}"> ${option}`;
-        form.appendChild(label);
-        form.appendChild(document.createElement('br'));
-    });
-
-    const submitButton = document.createElement('button');
-    submitButton.type = 'submit';
-    submitButton.textContent = 'Submit';
-    form.appendChild(submitButton);
-
-    formSection.appendChild(form);
-}
-
-function checkAnswer(correctAnswer) {
-    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-    if (selectedAnswer && selectedAnswer.value === correctAnswer) {
-        currentQuestion++;
-        if (currentQuestion < questions.length) {
-            showForm(); // Show the next question
-        } else {
-            generateCertificate();
+        function showForm() {
+            showSection('form');
         }
-    } else {
-        alert('Incorrect answer. Please try again.');
-    }
-}
-
-function generateCertificate() {
-    // Rest of your certificate generation code
-    // Call this function when all answers are correct
-}
-
-// Set the "Next" button's onclick event handler
-document.getElementById('video-section').querySelector('button').onclick = function () {
-    currentQuestion = 0; // Reset the current question
-    showForm();
-};
+    
+        function showCertificate() {
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const place = document.getElementById('place').value;
+    
+            document.getElementById('certificate-name').textContent = name;
+            document.getElementById('certificate-age').textContent = age;
+            document.getElementById('certificate-place').textContent = place;
+    
+            showSection('certificate');
+            return false; // Prevent form submission
+        }
     </script>
     
 

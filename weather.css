@@ -1,49 +1,43 @@
+/* style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .header {
+    font-size: 2em;
     color: #333;
-}
-
-.input-section {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .temperature {
+    font-size: 1.5em;
+    color: #ff5733;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .description {
+    font-size: 1.2em;
+    color: #444;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .location {
+    font-size: 1em;
+    color: #555;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .weather-icon {
+    width: 100px;
+    height: 100px;
     margin-top: 20px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input[type="text"] {
-    padding: 5px;
-    width: 60%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 5px 15px;
-    background-color: #0074D9;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.weather-info {
-    margin-top: 20px;
-}
-
-/* Add more styling as needed */
+  }
+  
